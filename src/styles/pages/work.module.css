@@ -1,0 +1,26 @@
+.works {
+  width: 1000%;
+  max-width: calc(1000px - 2rem);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.projectCard {
+  border-radius: 0.5rem;
+  background-color: #fff;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  margin: 0.5rem;
+  transition: all 0.2s ease-in-out;
+  text-decoration: none;
+  color: #000;
+  font-size: 1.5rem;
+  border: 2px solid transparent;
+}
+
+.projectCard:hover {
+  box-shadow: 0 0.5rem 2rem rgba(0, 0, 0, 0.2);
+  border-color: black;
+}

@@ -1,0 +1,4 @@
+.postContent {
+  width: 100%;
+  max-width: calc(1000px - 2rem);
+}

@@ -1,0 +1,27 @@
+.container p {
+  font-size: 1.2rem;
+  line-height: 1.3rem;
+}
+
+.almostHidden {
+  margin-top: -1rem;
+  opacity: 0.1;
+  font-size: 0.7rem;
+}
+.anchor {
+  padding: 0.5rem 1rem;
+  color: #fff;
+  background: #000;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  font-size: 1.5rem;
+  letter-spacing: 3px;
+  transition: all 0.2s ease-in-out;
+  text-transform: uppercase;
+  border: 3px solid transparent;
+}
+.anchor:hover {
+  background: #fff;
+  color: #000;
+  border-color: black;
+}
