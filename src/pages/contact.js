@@ -1,6 +1,7 @@
 import React from 'react';
 import Head from '../components/head';
 import Layout from '../components/layout';
+import Snackbar, { toggleSnackBar } from '../components/snackbar';
 import {
   form, formContainer, hero, invalidMessage, page
 } from '../styles/pages/contact.module.css';
@@ -30,11 +31,11 @@ class Form extends React.Component {
     e.preventDefault();
     const { email, name, message } = this.state;
     if (!validateEmail(email)) {
-      // todo: add error message
       document.querySelector('#invalid').style.display = 'block';
       setTimeout(() => {
         document.querySelector('#invalid').style.display = 'none';
       }, 5000);
+      toggleSnackBar('Invalid Email!');
     } else {
       const formData = new FormData();
       formData.append('email', email);
@@ -45,9 +46,8 @@ class Form extends React.Component {
         method: 'POST',
         body: formData,
       })
-      // todo: add success/failure message
-        .then((response) => console.log(response))
-        .catch((error) => console.log(error));
+        .then(() => toggleSnackBar('Message Sent!'))
+        .catch(() => toggleSnackBar('An Error Occurred, Please Try Again.'));
     }
   }
 
@@ -127,6 +127,7 @@ export default function ContactPage() {
   return (
     <Layout>
       <Head title="Contact" description="Contact Shafi Rayhan." />
+      <Snackbar />
       <div className={page}>
         <div className={hero}>
           {links.map((obj, i) => (
