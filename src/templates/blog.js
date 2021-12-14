@@ -1,5 +1,5 @@
 import { graphql } from 'gatsby';
-import React from 'react';
+import React, { useEffect } from 'react';
 import Head from '../components/head';
 import Layout from '../components/layout';
 import { postContent } from '../styles/pages/post.module.css';
@@ -7,6 +7,14 @@ import { postContent } from '../styles/pages/post.module.css';
 export default function BlogPost({ data }) {
   const { markdownRemark } = data;
   const { frontmatter, html } = markdownRemark;
+
+  useEffect(() => {
+    const postBody = document.querySelector('#postBody');
+    postBody.querySelectorAll('a').forEach((link) => {
+      link.target = '_blank';
+      link.rel = 'noopener noreferrer';
+    });
+  }, []);
 
   return (
     <Layout>
@@ -20,6 +28,7 @@ export default function BlogPost({ data }) {
         <h1>{frontmatter.title}</h1>
         <p>{frontmatter.date}</p>
         <div
+          id="postBody"
           className={postContent}
           dangerouslySetInnerHTML={{ __html: html }}
         />
