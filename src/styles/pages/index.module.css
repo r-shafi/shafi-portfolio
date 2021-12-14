@@ -1,15 +1,15 @@
 .container p {
-  font-size: 1.2rem;
-  line-height: 1.3rem;
+  font-size: 1.1rem;
+  line-height: 1.1rem;
 }
 
 .anchor {
-  padding: 0.5rem 1rem;
+  padding: 0.3rem 1rem;
   color: #fff;
   background: #000;
   border-radius: 0.5rem;
   text-decoration: none;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   letter-spacing: 3px;
   transition: all 0.2s ease-in-out;
   text-transform: uppercase;
