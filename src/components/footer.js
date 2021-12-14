@@ -5,15 +5,14 @@ import ig from '../assets/ig.svg';
 import twitter from '../assets/twitter.svg';
 import { footer, social } from '../styles/components/footer.module.css';
 
-
 const links = [
   {
     image: github,
-    link: 'https://github.com/r-shafi',
+    link: 'https://www.github.com/r-shafi',
   },
   {
     image: twitter,
-    link: 'https://twitter.com/shafiemoji',
+    link: 'https://www.twitter.com/shafiemoji',
   },
   {
     image: facebook,
@@ -28,11 +27,17 @@ const links = [
 export default function Footer() {
   return (
     <footer className={footer}>
-      <p>&copy; {new Date().getFullYear()}</p>
+      <p role="presentation">&copy; {new Date().getFullYear()}</p>
       <div className={social}>
         {links.map((obj, i) => (
-          <a href={obj.link} key={i} rel="noreferrer" target="_blank">
-            <img src={obj.image} alt="" />
+          <a
+            href={obj.link}
+            key={i}
+            rel="noreferrer"
+            target="_blank"
+            name={`link to ${obj.link.split('.')[1]}`}
+          >
+            <img src={obj.image} alt={`link to ${obj.link.split('.')[1]}`} />
           </a>
         ))}
       </div>
