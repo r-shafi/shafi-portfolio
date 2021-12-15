@@ -2,7 +2,7 @@ import { graphql } from 'gatsby';
 import React, { useEffect } from 'react';
 import Head from '../components/head';
 import Layout from '../components/layout';
-import { postContent } from '../styles/pages/post.module.css';
+import { postContent, postInformation } from '../styles/pages/post.module.css';
 
 export default function BlogPost({ data }) {
   const { markdownRemark } = data;
@@ -25,8 +25,11 @@ export default function BlogPost({ data }) {
         url={frontmatter.slug}
       />
       <div>
+        <div className={postInformation}>
+
         <h1>{frontmatter.title}</h1>
         <p>{frontmatter.date}</p>
+        </div>
         <div
           id="postBody"
           className={postContent}

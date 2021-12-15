@@ -9,6 +9,7 @@
   max-height: 80vh;
   margin: 0 auto;
   border-radius: 0.2rem;
+  border: 1px dotted #00000050;
 }
 
 .postContent blockquote {
@@ -47,4 +48,41 @@
 .postContent p a:hover,
 .postContent li a:hover {
   border-color: #ff004c;
+}
+
+.postInformation {
+  width: 100%;
+  max-width: calc(1000px - 2rem);
+}
+
+@media (max-width: 420px) {
+  .postInformation {
+    width: 100%;
+    max-width: calc(410px - 2rem);
+  }
+
+  .postContent {
+    width: 100%;
+    max-width: calc(410px - 2rem);
+  }
+
+  .postContent img {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 375px) {
+  .postInformation {
+    width: 100%;
+    max-width: calc(375px - 2rem);
+  }
+
+  .postContent {
+    width: 100%;
+    max-width: calc(375px - 2rem);
+  }
+
+  .postContent img {
+    max-width: 100%;
+  }
 }
