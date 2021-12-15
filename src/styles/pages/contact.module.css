@@ -3,7 +3,7 @@
   align-items: center;
   width: 100%;
   max-width: calc(1000px - 2rem);
-  height: calc(100vh - 13rem);
+  min-height: calc(100vh - 13rem);
 }
 
 .formContainer {
@@ -110,5 +110,25 @@
 @media (max-width: 1000px) {
   .page {
     flex-direction: column;
+  }
+}
+
+@media (max-width: 420px) {
+  .page {
+    margin: 0 auto;
+    width: calc(100% - 2rem);
+  }
+
+  .hero {
+    gap: 0.5rem;
+    align-items: center;
+  }
+
+  .hero a {
+    font-size: 1rem;
+  }
+
+  .formContainer h2 {
+    margin: 2rem 0 1rem;
   }
 }
