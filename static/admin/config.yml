@@ -1,0 +1,27 @@
+backend:
+  name: github
+  repo: r-shafi/shafi-portfolio
+  branch: main
+
+media_folder: src/cms-assets
+public_folder: /assets
+
+site_url: https://rshafi.netlify.app
+
+collections:
+  - name: blog
+    label: Blog
+    folder: src/blog
+    create: true
+    slug: '{{title}}'
+    fields:
+      - { name: slug, label: Slug, default: '/blog/' }
+      - name: date
+        label: Date
+        widget: datetime
+        date_format: 'YYYY-MM-DD'
+        time_format: false
+      - { name: title, label: Title }
+      - { name: info, label: Description }
+      - { name: tags, label: Tags, hint: Separate using Comma }
+      - { name: body, label: Body, widget: markdown }
