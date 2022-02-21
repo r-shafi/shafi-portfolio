@@ -10,10 +10,7 @@ export default function Home() {
       <div className={container}>
         <h1>Hi, I am Shafi Rayhan!</h1>
         <p>
-          I'm an experienced Web Developer from Sylhet, Bangladesh.
-          {' '}
-          <br />
-          I was
+          I'm an experienced Web Developer from Sylhet, Bangladesh. <br />I was
           introduced to programming in 2019 but had to let go because of my
           study. But then COVID-19 came and I decided to try it again, and I've
           been trying ever since.
@@ -22,12 +19,9 @@ export default function Home() {
           I started building websites with the core web technologies like HTML,
           CSS and JavaScript. Later on, I learned React and Gatsby and built
           some cool stuff.
-          {' '}
           <br />
-          {' '}
-          After a while, I decided to apply for a job as
-          a Web Developer and to my surprise, I got a job at
-          {' '}
+          After a while, I decided to apply for a job as a Web Developer and to
+          my surprise, I got a job at{' '}
           <a href="https://www.arrowsoft.co/" target="_blank" rel="noreferrer">
             Arrowsoft
           </a>
