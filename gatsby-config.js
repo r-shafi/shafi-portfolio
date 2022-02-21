@@ -4,6 +4,7 @@ module.exports = {
   },
   plugins: [
     'gatsby-plugin-sitemap',
+    'gatsby-plugin-netlify-cms',
     {
       resolve: 'gatsby-source-filesystem',
       options: {
@@ -14,12 +15,14 @@ module.exports = {
     {
       resolve: 'gatsby-transformer-remark',
       options: {
-        plugins: [{
-          resolve: 'gatsby-remark-vscode',
-          options: {
-            theme: 'Monokai',
+        plugins: [
+          {
+            resolve: 'gatsby-remark-vscode',
+            options: {
+              theme: 'Monokai',
+            },
           },
-        }],
+        ],
       },
     },
   ],
